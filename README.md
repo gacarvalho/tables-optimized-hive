@@ -52,7 +52,7 @@ O nosso objetivo agora é saber como está a consistência dos dados da tabela c
 
 Pronto, agora chegamos em uma parte interessante, o momento de criar a tabela com a compressão! Para isso vamos utilizar o comando ```create table pop_parquet_snappy(zip_code int, total_population int, median_age float, total_males int, total_females int, total_households int, average_households_size float) stored as parquet tblproperties('parquet.compress'='SNAPPY');```
 
-E após a criação, vamos analisar a descrição dessa tabela com o comando desc formatted pop_parquet_snappy; Como é possível observar na imagem abaixo, a linha selecionada mostra que os parâmetros da tabela tem um parquet do tipo compressão SNAPPY.
+Após a criação, vamos analisar a descrição dessa tabela com o comando ```desc formatted pop_parquet_snappy;``` Como é possível observar na imagem abaixo, a linha selecionada mostra que os parâmetros da tabela tem um parquet do tipo compressão SNAPPY.
 ![CRIANDO A TABELA COM A COMPRESSÃO DO TIPO SNAPPY](https://github.com/gacarvalho/criacao-tabelas-otimizadas/blob/main/Cria%C3%A7%C3%A3o%20de%20Tabelas%20Otimizadas/7_8.%20Exercicio_7_8_.png?raw=true)
 
 📢 ETAPA 6: VERIFICANDO A CONSISTÊNCIA DA TABELA pop_parquet_snappy
@@ -62,7 +62,7 @@ E após a criação, vamos analisar a descrição dessa tabela com o comando des
 
 Agora na etapa 6, vamos verificar a consistência da tabela pop_parquet_snappy contando o número de registros da tabela com o comando ```select count(*) from pop_parquet_snappy;```
 
-E logo após verificar o número de registros na tabela. Para isso, vamos selecionar os primeiros 5 registros!
+Em seguida, verificamos o número de registros na tabela e, selecionar os primeiros 5 registros!
 ![VERIFICANDO A CONSISTÊNCIA DA TABELA pop_parquet_snappy](https://github.com/gacarvalho/criacao-tabelas-otimizadas/blob/main/Cria%C3%A7%C3%A3o%20de%20Tabelas%20Otimizadas/9_10.%20Exercicio_9_10_.png?raw=true)
 
 📢 ETAPA 7: COMPARANDO AS TABELAS
