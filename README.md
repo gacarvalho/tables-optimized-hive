@@ -47,8 +47,8 @@ O nosso objetivo agora é saber como está a consistência dos dados da tabela c
 
 📢 ETAPA 5: CRIANDO A TABELA COM A COMPRESSÃO DO TIPO SNAPPY
 
-> Criar a tabela pop_parquet_snappy no formato parquet com compressão Snappy para ler os dados da tabela pop
-> Inserir os dados da tabela pop na pop_parquet_snappy
+> Questão 5.1: Criar a tabela pop_parquet_snappy no formato parquet com compressão Snappy para ler os dados da tabela pop
+> Questão 5.2: Inserir os dados da tabela pop na pop_parquet_snappy
 
 Pronto, agora chegamos em uma parte interessante, o momento de criar a tabela com a compressão! Para isso vamos utilizar o comando ```create table pop_parquet_snappy(zip_code int, total_population int, median_age float, total_males int, total_females int, total_households int, average_households_size float) stored as parquet tblproperties('parquet.compress'='SNAPPY');```
 
@@ -57,8 +57,8 @@ Após a criação, vamos analisar a descrição dessa tabela com o comando ```de
 
 📢 ETAPA 6: VERIFICANDO A CONSISTÊNCIA DA TABELA pop_parquet_snappy
 
-> Contar os registros da tabela pop_parquet_snappy
-> Selecionar os 5 primeiros registros da tabela pop_parquet_snappy
+> Questão 6.3: Contar os registros da tabela pop_parquet_snappy
+> Questão 6.4: Selecionar os 5 primeiros registros da tabela pop_parquet_snappy
 
 Agora na etapa 6, vamos verificar a consistência da tabela pop_parquet_snappy contando o número de registros da tabela com o comando ```select count(*) from pop_parquet_snappy;```
 
@@ -67,7 +67,7 @@ Em seguida, verificamos o número de registros na tabela e, selecionar os primei
 
 📢 ETAPA 7: COMPARANDO AS TABELAS
 
-> Comparar as tabelas pop, pop_parquet e pop_parquet_snappy no HDFS. 
+> Questão 7.1: Comparar as tabelas pop, pop_parquet e pop_parquet_snappy no HDFS. 
  
 Para realizar a etapa 7 vamos comparar as tabelas, verificando a consistência de cada uma e analisando o conteúdo. Antes de mais nada, vamos consultar as tabelas que estão presentes no nosso Hive com o comando ```hdfs dfs -ls /user/hive/warehouse/empresastartup.db```. É fácil observar as tabelas (1) pop (2) pop_parquet (3) pop_parquet_snappy.
 ![COMPARANDO AS TABELAS](https://github.com/gacarvalho/criacao-tabelas-otimizadas/blob/main/Cria%C3%A7%C3%A3o%20de%20Tabelas%20Otimizadas/11_a.%20Mostrando%20as%20tabelas%20internas%20no%20hive.png?raw=true)
